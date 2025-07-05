@@ -33,7 +33,7 @@ Before running this project, make sure you have the following installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/basichome.git
+git clone https://github.com/vikashgoodsharma/basichome.git
 cd basichome
 ```
 
@@ -92,14 +92,6 @@ src/components/__tests__/
 └── CartContext.test.jsx    # Cart business logic tests
 ```
 
-### Coverage Thresholds
-
-The project maintains a minimum coverage threshold of 70% for:
-- Branches
-- Functions
-- Lines
-- Statements
-
 ## 📁 Project Structure
 
 ```
@@ -138,11 +130,12 @@ basichome/
 
 ### Vercel (Recommended)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
+https://basichome.vercel.app/
 
 ### Manual Deployment
 
 1. Build the application:
+
    ```bash
    npm run build
    ```
@@ -151,33 +144,3 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
    ```bash
    npm start
    ```
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-### Development Guidelines
-
-- Write tests for new features
-- Ensure all tests pass before submitting PR
-- Follow the existing code style
-- Update documentation as needed
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- [FakeStore API](https://fakestoreapi.com/) for providing product data
-- [Next.js](https://nextjs.org/) for the amazing framework
-- [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS framework
-- [React Testing Library](https://testing-library.com/) for testing utilities
-
-## 📞 Support
-
-If you have any questions or need help, please open an issue on GitHub.
