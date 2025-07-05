@@ -1,40 +1,183 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# BasicHome - E-commerce Product Catalog
 
-## Getting Started
+A modern, responsive e-commerce product catalog built with Next.js, React, and Tailwind CSS. Features include product browsing, search functionality, cart management, and a clean, user-friendly interface.
 
-First, run the development server:
+## 🚀 Features
+
+- **Product Catalog**: Browse products with images, titles, prices, and descriptions
+- **Search Functionality**: Real-time search by product title
+- **Shopping Cart**: Add/remove products with React Context for state management
+- **Responsive Design**: Mobile-first design with Tailwind CSS
+- **Product Details**: Detailed product pages with comprehensive information
+- **SEO Optimized**: Meta tags and structured data for better search engine visibility
+- **Testing**: Comprehensive unit tests with Jest and React Testing Library
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15.3.4
+- **Frontend**: React 19.0.0
+- **Styling**: Tailwind CSS 4
+- **Testing**: Jest + React Testing Library
+- **API**: FakeStore API for product data
+- **State Management**: React Context API
+
+## 📋 Prerequisites
+
+Before running this project, make sure you have the following installed:
+
+- **Node.js**: Version 18.x or higher
+- **npm**: Version 8.x or higher
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/basichome.git
+cd basichome
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### 4. Build for Production
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```bash
+npm run build
+npm start
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+## 🧪 Testing
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Running Tests
 
-## Learn More
+```bash
+# Run all tests
+npm test
 
-To learn more about Next.js, take a look at the following resources:
+# Run tests in watch mode (for development)
+npm run test:watch
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+# Run tests with coverage report
+npm run test:coverage
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Run tests for CI/CD pipeline
+npm run test:ci
+```
 
-## Deploy on Vercel
+### Test Coverage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The project includes comprehensive test coverage for:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+- **Component Testing**: ProductCard component with cart functionality
+- **Business Logic Testing**: Cart context with add/remove operations
+- **Integration Testing**: Component interactions and state management
+
+### Test Structure
+
+```
+src/components/__tests__/
+├── ProductCard.test.jsx    # ProductCard component tests
+└── CartContext.test.jsx    # Cart business logic tests
+```
+
+### Coverage Thresholds
+
+The project maintains a minimum coverage threshold of 70% for:
+- Branches
+- Functions
+- Lines
+- Statements
+
+## 📁 Project Structure
+
+```
+basichome/
+├── .github/workflows/      # GitHub Actions CI/CD
+├── public/                 # Static assets
+├── src/
+│   ├── components/         # React components
+│   │   ├── __tests__/     # Test files
+│   │   ├── CartContext.jsx # Cart state management
+│   │   ├── Header.jsx     # Site header with cart icon
+│   │   ├── ProductCard.jsx # Product display component
+│   │   └── ImageWrapper.jsx # Image wrapper component
+│   ├── pages/             # Next.js pages
+│   │   ├── index.js       # Home page with product list
+│   │   ├── products/      # Product detail pages
+│   │   └── _app.js        # App wrapper with providers
+│   └── styles/            # Global styles
+├── jest.config.js         # Jest configuration
+├── jest.setup.js          # Jest setup file
+└── package.json           # Dependencies and scripts
+```
+
+## 🔧 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm test` - Run tests
+- `npm run test:watch` - Run tests in watch mode
+- `npm run test:coverage` - Run tests with coverage
+- `npm run test:ci` - Run tests for CI/CD
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
+
+### Manual Deployment
+
+1. Build the application:
+   ```bash
+   npm run build
+   ```
+
+2. Start the production server:
+   ```bash
+   npm start
+   ```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+### Development Guidelines
+
+- Write tests for new features
+- Ensure all tests pass before submitting PR
+- Follow the existing code style
+- Update documentation as needed
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [FakeStore API](https://fakestoreapi.com/) for providing product data
+- [Next.js](https://nextjs.org/) for the amazing framework
+- [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS framework
+- [React Testing Library](https://testing-library.com/) for testing utilities
+
+## 📞 Support
+
+If you have any questions or need help, please open an issue on GitHub.
